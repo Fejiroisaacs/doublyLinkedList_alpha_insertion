@@ -136,17 +136,7 @@ public class DoublyLinkedList {
             // adds the NameData element to the doubly LinkedList if it wasn't already added.
             // we don't worry about duplicates because after we add the NameData, we usually "return" -- end the method.
             if (comparedValue >= 0) addBetween(inputName, curr.getPrev(), curr); else addLast(inputName);
-            // accounts for the corner case where the loop was never entered because the comparedValue gotten before the loop had a value >= 0. then we just add the NameData as usual
-//            if (!enteredLoop) {
-//                addBetween(inputName, curr.getPrev(), curr);
-//            } else if(curr == trailer.getPrev()){ // accounts for corner case where we got to the end of the LinkedList and haven't
-//                // inserted the NameData, but we can't insert it in the loop because curr.getNext() would point to null which would break the code
-//                // so, we manually check where the NameData should be inserted here, at the end.
-//                comparedValue = curr.getElement().compareTo(inputName);
-//                if (comparedValue >= 0) addBetween(inputName, curr.getPrev(), curr); else addLast(inputName);
-//            }
         }
-
     }
 
     /**
